@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -139,6 +139,20 @@ namespace ЛР8
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = CheckUnsavedChanges();
+        }
+        private void Cut_Click(object sender, RoutedEventArgs e)
+        {
+            TextArea.Cut();
+        }
+
+        private void Copy_Click(object sender, RoutedEventArgs e)
+        {
+            TextArea.Copy();
+        }
+
+        private void Paste_Click(object sender, RoutedEventArgs e)
+        {
+            TextArea.Paste();
         }
     }
 }
