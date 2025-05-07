@@ -1,4 +1,4 @@
-﻿<Window x:Class="ЛР8.MainWindow"
+<Window x:Class="ЛР8.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
@@ -21,6 +21,10 @@
                 <sys:String x:Key="UnsavedChanges">Save changes?</sys:String>
                 <sys:String x:Key="FileFilter">Text files (*.txt)|*.txt|All files (*.*)|*.*</sys:String>
                 <sys:String x:Key="Error">Error</sys:String>
+                <sys:String x:Key="Edit">Edit</sys:String>
+                <sys:String x:Key="Cut">Cut</sys:String>
+                <sys:String x:Key="Copy">Copy</sys:String>
+                <sys:String x:Key="Paste">Paste</sys:String>
             </ResourceDictionary>
 
             <!-- Ресурсы для русского -->
@@ -35,6 +39,10 @@
                 <sys:String x:Key="UnsavedChanges">Сохранить изменения?</sys:String>
                 <sys:String x:Key="FileFilter">Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*</sys:String>
                 <sys:String x:Key="Error">Ошибка</sys:String>
+                <sys:String x:Key="Edit">Правка</sys:String>
+                <sys:String x:Key="Cut">Вырезать</sys:String>
+                <sys:String x:Key="Copy">Копировать</sys:String>
+                <sys:String x:Key="Paste">Вставить</sys:String>
             </ResourceDictionary>
 
             <!-- Стили -->
@@ -59,7 +67,11 @@
                 <Separator/>
                 <MenuItem Header="{DynamicResource Exit}" Click="Exit_Click"/>
             </MenuItem>
-
+            <MenuItem Header="{DynamicResource Edit}">
+                <MenuItem Header="{DynamicResource Cut}" Click="Cut_Click"/>
+                <MenuItem Header="{DynamicResource Copy}" Click="Copy_Click"/>
+                <MenuItem Header="{DynamicResource Paste}" Click="Paste_Click"/>
+            </MenuItem>
             <MenuItem Header="{DynamicResource Language}">
                 <MenuItem Header="English" Click="Language_Click" Tag="en"/>
                 <MenuItem Header="Русский" Click="Language_Click" Tag="ru"/>
